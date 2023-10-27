@@ -31,9 +31,11 @@ const format_cur_weather = (data) => {
 }
 
 const format_forecast = (data) => {
-    let {timezone, daily, hourly} = data;
     
-    daily = daily.slice(1,6).map(d => {
+    let {timezone, daily, hourly} = data;
+    console.log(typeof data);
+    
+    /*daily = daily.slice(1,6).map(d => {
         return {
             title: format_local_time(d.dt, timezone, 'ccc'),
             temp: d.temp.day,
@@ -47,7 +49,7 @@ const format_forecast = (data) => {
             temp: d.temp.day,
             icon: d.weather[0].icon
         }
-    });
+    });*/
 
     return {timezone, daily, hourly};
 }
@@ -63,7 +65,7 @@ const get_formatted_weather_data = async (searchParams) => {
     const formatted_forecast = await get_weather_data('onecall', {
         lat, 
         lon, 
-        exclude: 'current,minutely,alerts', 
+        exclude: "current,minutely,alerts", 
         units: searchParams.units
     }).then(format_forecast);
 
