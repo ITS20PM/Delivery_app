@@ -1,10 +1,11 @@
 import { DateTime } from "luxon";
 
-const API_Key = "88a3affac7dc381106ad2e97e581b508";
+const API_Key = "13e63718bf6d0335d064ce397727c707";
 const base_url = "https://api.openweathermap.org/data/2.5/";
 
 const get_weather_data = (infoType, searchParams) => {
     const url = new URL(base_url + "/" + infoType);
+    console.log(url);
     url.search = new URLSearchParams({ ...searchParams, appid: API_Key});
 
     console.log(url);
@@ -21,19 +22,22 @@ const format_cur_weather = (data) => {
         dt,
         sys: {country, sunrise, sunset},
         weather,
-        wind: {speed}
+        wind: {speed},
+        timezone
     } = data
 
     const {main: details, icon} = weather[0];
 
     return {lat, lon, temp, feels_like, temp_min, temp_max, 
-        humidity, name, dt, country, sunrise, sunset, details, icon, speed};
+        humidity, name, dt, country, sunrise, sunset, details, icon, speed, timezone};
 }
 
 const format_forecast = (data) => {
     
-    let {timezone, daily, hourly} = data;
-    console.log(typeof data);
+    // let {daily, hourly} = data;
+    
+    let daily = 20;
+    let hourly = 10;
     
     /*daily = daily.slice(1,6).map(d => {
         return {
@@ -51,7 +55,7 @@ const format_forecast = (data) => {
         }
     });*/
 
-    return {timezone, daily, hourly};
+    return {daily, hourly};
 }
 
 const get_formatted_weather_data = async (searchParams) => {
