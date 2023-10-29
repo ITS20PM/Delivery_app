@@ -11,12 +11,14 @@ function NavBar() {
     const [nav, setNav] = useState(false);
 
     return (
-        <div className='max-w-[1640px] mx-auto flex jutisfy-between items-center p-5'>
+        <div className='max-w-[1640px] mx-auto flex jutisfy-between items-center p-5 
+        mt-4 py-5 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl 
+        shadow-gray-400'>
 
     
 
             <div className='flex items-center'>
-                <div onclick={() => setNav(!nav)} className='cursor-pointer'>
+                <div onClick={() => setNav(!nav)} className='cursor-pointer'>
                     <AiOutlineMenu size={30} />
                 </div>
                 
