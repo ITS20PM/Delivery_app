@@ -8,13 +8,15 @@ import {MdFavorite, MdHelp} from 'react-icons/md';
 
 function NavBar() {
 
-    const [nav, set_nav] = useState(false);
+    const [nav, setNav] = useState(false);
 
     return (
         <div className='max-w-[1640px] mx-auto flex jutisfy-between items-center p-5'>
 
+    
+
             <div className='flex items-center'>
-                <div onclick={() => set_nav(!nav)} className='cursor-pointer'>
+                <div onclick={() => setNav(!nav)} className='cursor-pointer'>
                     <AiOutlineMenu size={30} />
                 </div>
                 
@@ -38,11 +40,19 @@ function NavBar() {
                 Cart
             </button>
 
-            
-            <div>
-                <AiOutlineClose size={25} onClick={() => set_nav(!nav)} className='absolute right-4 top:4 cursor-pointer'/>
-                
-                <nav className='mx-10'>
+            {/* overlay */}
+            {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>: ''}
+
+            {/* side drawer menu */}
+            <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300'
+                :"fixed top-0 left-[80%] w-[250px] h-screen bg-gradient-to-r from-cyan-500 to-blue-500 bg-opacity-50 z-10 duration-300"}>
+                <AiOutlineClose 
+                    onClick={() => setNav(!nav)} 
+                    size={25} 
+                    className='absolute right-4 top:4 cursor-pointer'
+                />
+                    
+                <nav>
                     <ul className='flex flex-col p-4 text-grey-800'>
                         <li className='text-xl py-4 flex'><TbTruckDelivery size={30} className="mr-4"/>Orders</li>
                         <li className='text-xl py-4 flex'><MdFavorite size={30} className='mr-4'/>Favorites</li>
