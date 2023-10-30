@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './Components/NavBar';
-import Main from './Components/Main';
 import MainComponents from './Components/MainComponents';
+import HeadlineComponents from './Components/HeadlineComponents';
 
 function App() {
 
@@ -13,8 +13,9 @@ function App() {
     shadow-gray-400'
     */}
       <NavBar />
-      <Main/>
       <MainComponents/>
+      <HeadlineComponents/>
+
     </div>
   );
 }
