@@ -1,8 +1,14 @@
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import NavBar from './Components/NavBar';
 import MainComponents from './Components/MainComponents';
 import HeadlineComponents from './Components/HeadlineComponents';
+import Login from './Pages/Login';
 
 function App() {
 
@@ -17,7 +23,17 @@ function App() {
       <MainComponents/>
       <HeadlineComponents/>
 
+      <Router>
+        <Routes>
+          <Route 
+            exact 
+            path="/Login" 
+            element={<Login />}
+          />
+        </Routes>
+      </Router>
     </div>
+
   );
 }
 

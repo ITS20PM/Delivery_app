@@ -5,17 +5,21 @@ import {BsFillCartFill, BsFillSaveFill} from 'react-icons/bs';
 import {TbTruckDelivery} from 'react-icons/tb';
 import {FaUserFriends, FaWallet} from 'react-icons/fa';
 import {MdFavorite, MdHelp} from 'react-icons/md';
+import {Link} from "react-router-dom";
+import Login from '../Pages/Login';
+
 
 function NavBar() {
 
     const [nav, setNav] = useState(false);
+
 
     return (
         <div className='max-w-[1640px] mx-auto flex jutisfy-between items-center p-5 
         mt-4 py-5 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl 
         shadow-gray-400'>
 
-    
+
 
             <div className='flex items-center'>
                 <div onClick={() => setNav(!nav)} className='cursor-pointer'>
@@ -41,6 +45,13 @@ function NavBar() {
                 <BsFillCartFill size={25} className='mr-2'/>
                 Cart
             </button>
+
+            
+            <button className='bg-black text-white md:flex p-4 rounded-full ml-10'>
+                Login
+            </button>
+            
+            
 
             {/* overlay */}
             {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>: ''}
