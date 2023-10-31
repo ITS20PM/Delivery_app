@@ -1,4 +1,5 @@
 import './App.css';
+
 import NavBar from './Components/NavBar';
 import MainComponents from './Components/MainComponents';
 import HeadlineComponents from './Components/HeadlineComponents';
