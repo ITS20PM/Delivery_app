@@ -1,7 +1,7 @@
 import './App.css';
 import AppRoute from './AppRoute';
-import NavBar from './Components/NavBar';
-import HeadlineComponents from './Components/HeadlineComponents';
+import NavBar from './Components/Navbar/NavBar';
+import HeadlineComponents from './Components/Menu/HeadlineComponents';
 import Login from './Pages/Login';
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
     */}
       <NavBar />
       <AppRoute />
-      <HeadlineComponents/>
 
 
     </div>
