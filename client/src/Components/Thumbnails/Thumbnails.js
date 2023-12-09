@@ -7,10 +7,7 @@ export default function Thumbnails({ foods }) {
             foods.map(food =>
                     <li key={food.id}>
                         <Link to={`/food/${food.id}`}>
-                            <img 
-                                src={food.image_url}
-                                alt={food.name}    
-                            />
+                            <img src={food.image_url} />
                         </Link>
                         <div>
                             <div>{food.name}</div>
