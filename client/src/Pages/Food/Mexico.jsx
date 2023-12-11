@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react';
-import {getAll} from '../../Service/FoodService';
+import {getAll} from '../../Service/Mexico/Mexico';
 import Thumbnails from '../../Components/Thumbnails/Thumbnails';
 
 const initialState = {foods: []};
