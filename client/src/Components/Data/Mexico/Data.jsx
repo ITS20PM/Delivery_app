@@ -1,6 +1,6 @@
 export const mexico_list = [
     {
-        id: '1',
+        id: '9',
         name: 'Beef Tacos',
         cooktime: '8-12',
         price: 10,
@@ -9,7 +9,7 @@ export const mexico_list = [
     }, 
 
     {
-        id: '2',
+        id: '10',
         name: 'Burrito',
         cooktime: '8-12',
         price: 10,

@@ -1,6 +1,6 @@
 export const food_list = [
     {
-        id: '1',
+        id: '5',
         name: 'Bolognese Spaghetti',
         cooktime: '10-20',
         price: 20,
@@ -9,7 +9,7 @@ export const food_list = [
     }, 
 
     {
-        id: '2',
+        id: '6',
         name: 'Pizza',
         cooktime: '8-12',
         price: 10,

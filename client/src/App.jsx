@@ -1,8 +1,6 @@
 import './App.css';
 import AppRoute from './AppRoute';
 import NavBar from './Components/Navbar/NavBar';
-import HeadlineComponents from './Components/Menu/HeadlineComponents';
-import Login from './Pages/Login';
 
 function App() {
 
